@@ -20,6 +20,8 @@ import java.util.List;
 @JsonIgnoreProperties("libros")// Ignora la propiedad libros al serializar a JSON
 public class Persona extends Base {
 
+
+
     @Column(name = "nombre")
     private String nombre;
 
@@ -42,6 +44,6 @@ public class Persona extends Base {
     )
 
 
-   private List<Libro> libros = new ArrayList<Libro>();
+
 
 }

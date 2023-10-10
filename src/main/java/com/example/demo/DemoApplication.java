@@ -34,38 +34,6 @@ public class DemoApplication {
 						   DomicilioRepository domicilioRepository, LibroRepository libroRepository,
 						   LocalidadRepository localidadRepository, PersonaRepository personaRepository) {
 		return args -> {
-			Autor autor = Autor.builder()
-					.nombre("Stephen")
-					.apellido("King")
-					.biografia("Escritor estadounidense de novelas de terror," +
-							" ficción sobrenatural, misterio, ciencia ficción y " +
-							"literatura fantástica. ")
-					.build();
-			autorRepository.save(autor);
-
-			Localidad localidad = Localidad.builder()
-					.denominacion("Lujan de cuyo")
-					.build();
-			localidadRepository.save(localidad);
-
-			Localidad localidad1 = Localidad.builder()
-					.denominacion("Mendoza")
-					.build();
-			localidadRepository.save(localidad1);
-
-		Domicilio domicilio = Domicilio.builder()
-				.calle("Viamonte")
-				.numero(1231)
-				.localidad(localidad)
-				.build();
-		domicilioRepository.save(domicilio);
-
-		Domicilio domicilio1 = Domicilio.builder()
-				.calle("Rodriguez")
-				.numero(432)
-				.localidad(localidad1)
-				.build();
-		domicilioRepository.save(domicilio1);
 
 		};
 	}

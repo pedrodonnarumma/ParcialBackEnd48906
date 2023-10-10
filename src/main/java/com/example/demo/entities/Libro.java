@@ -15,6 +15,9 @@ import java.util.List;
 @Builder
 
 public class Libro extends Base{
+
+
+
     @Column(name = "titulo")
     private String titulo;
     @Column(name = "fecha")
@@ -26,6 +29,5 @@ public class Libro extends Base{
 
     @ManyToMany(cascade = CascadeType.REFRESH)
     private List<Autor> autores;
-
 
 }
